@@ -26,13 +26,13 @@ export default function Home() {
             alt="Josh Chang"
             className="object-cover absolute top-[3cqw] right-[3cqw] w-[54.39cqw] h-[min(40cqw,50cqh)]"
           />
-          <div className="flex flex-col gap-[2cqw] absolute top-[2cqw] left-[3cqw]">
+          <div className="flex flex-col gap-[2cqw] absolute top-[4cqw] left-[3.6cqw]">
             <h1 className="font-black uppercase flex flex-col">
-              <span className="text-[13.91cqw] leading-[12cqw] text-[var(--black)]">
-                Josh <span className="text-[var(--cream)] ml-[9cqw]">D.</span>
+              <span className="text-[13.91cqw] leading-[12cqw] text-[var(--orange)]">
+                Josh<span className="text-[var(--cream)]">ua</span>
               </span>
-              <span className="text-[13.91cqw] leading-[12cqw] text-[var(--orange)] pl-[8.2cqw]">
-                Cha<span className="text-[var(--black)]">ng</span>
+              <span className="text-[9.5cqw] leading-[9.5cqw] text-[var(--black)]">
+                Chang
               </span>
             </h1>
           </div>
