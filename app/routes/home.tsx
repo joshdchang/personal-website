@@ -12,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-import { allPosts } from "content-collections";
+import { Link } from "react-router";
 
 export default function Home() {
   return (
@@ -31,7 +31,13 @@ export default function Home() {
             <h1 className="font-black uppercase flex flex-col">
               <span className="text-[13.91cqw] leading-[12cqw]">
                 <span className="text-[var(--teal)]">Josh</span>{" "}
-                <span className="text-[var(--cream)] ml-[9cqw]">D<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="bg-[var(--cream)] hover:bg-[var(--orange)] transition-all duration-300 cursor-pointer inline-flex h-[2.8cqw] w-[2.8cqw] relative right-[0.1cqw] top-[0.2cqw] items-center justify-center rounded-full"></a></span>
+                <span className="text-[var(--cream)] ml-[9cqw]">
+                  D
+                  <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    className="bg-[var(--cream)] hover:bg-[var(--orange)] transition-all duration-300 cursor-pointer inline-flex h-[2.8cqw] w-[2.8cqw] relative right-[0.1cqw] top-[0.2cqw] items-center justify-center rounded-full"
+                  ></a>
+                </span>
               </span>
               <span className="text-[13.91cqw] leading-[12cqw] text-[var(--orange)] pl-[8.2cqw]">
                 Cha<span className="text-[var(--black)]">ng</span>
@@ -39,24 +45,27 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex flex-col items-end justify-between gap-[2cqw] text-[var(--black)] font-light text-[min(5cqw,10cqh)] leading-[min(5cqw,10cqh)] absolute right-[3cqw] left-[3cqw] bottom-[3cqw] uppercase">
-            <a
-              href="/development"
+            <Link
+              to="/about"
+              viewTransition
               className="hover:text-[var(--teal)] transition-all hover:scale-105 hover:-translate-x-2.5 duration-300"
             >
-              Developer
-            </a>
-            <a
-              href="/photos"
+              About
+            </Link>
+            <Link
+              to="/photos"
+              viewTransition
               className="hover:text-[var(--teal)] transition-all hover:scale-105 hover:-translate-x-2.5 duration-300"
             >
-              Adventurer
-            </a>
-            <a
-              href="/earth"
+              Photos
+            </Link>
+            <Link
+              to="/thoughts"
+              viewTransition
               className="hover:text-[var(--teal)] transition-all hover:scale-105 hover:-translate-x-2.5 duration-300"
             >
-              Earth Scientist
-            </a>
+              Thoughts
+            </Link>
           </div>
           <a
             href="mailto:joshchang04@gmail.com"
