@@ -1,0 +1,43 @@
+{
+  "_chunk-QMGIS6GS-hoMvXFpG.js": {
+    "file": "assets/chunk-QMGIS6GS-hoMvXFpG.js",
+    "name": "chunk-QMGIS6GS"
+  },
+  "app/assets/mountain.png": {
+    "file": "assets/mountain-D5HQIjQx.png",
+    "src": "app/assets/mountain.png"
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-BOcEmQ_E.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-QMGIS6GS-hoMvXFpG.js"
+    ],
+    "css": [
+      "assets/root-Mgkx0TVS.css"
+    ]
+  },
+  "app/routes/home.tsx?__react-router-build-client-route": {
+    "file": "assets/home-CGavS6e6.js",
+    "name": "home",
+    "src": "app/routes/home.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-QMGIS6GS-hoMvXFpG.js"
+    ],
+    "assets": [
+      "assets/mountain-D5HQIjQx.png"
+    ]
+  },
+  "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx": {
+    "file": "assets/entry.client-WabgBupn.js",
+    "name": "entry.client",
+    "src": "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_chunk-QMGIS6GS-hoMvXFpG.js"
+    ]
+  }
+}
