@@ -8,9 +8,10 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    content: z.string(),
   }),
 });
 
 export default defineConfig({
-  collections: [posts],
+  content: [posts],
 });

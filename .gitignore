@@ -1,9 +1,13 @@
 .DS_Store
 /node_modules/
 
-# React Router
-/.react-router/
-/build/
+# Vite / TanStack Start
+/dist/
+/.tanstack/
 
 # Content Collections
 /.content-collections/
+
+# Cloudflare
+/.wrangler/
+worker-configuration.d.ts
