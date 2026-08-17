@@ -1,28 +1,19 @@
 {
-  "include": [
-    "src/**/*",
-    "vite.config.ts",
-    "content-collections.ts",
-    "worker-configuration.d.ts"
-  ],
+  "include": ["src/**/*", "vite.config.ts"],
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "types": ["vite/client", "node"],
+    "types": ["vite/client"],
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "checkJs": true,
-    "esModuleInterop": true,
     "isolatedModules": true,
-    "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
     "paths": {
-      "~/*": ["./src/*"],
-      "content-collections": ["./.content-collections/generated"]
+      "~/*": ["./src/*"]
     }
   }
 }
