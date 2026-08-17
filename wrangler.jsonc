@@ -6,5 +6,20 @@
   "main": "@tanstack/react-start/server-entry",
   "observability": {
     "enabled": true
-  }
+  },
+  // Adding `routes` makes Wrangler disable workers.dev unless it is set here.
+  "workers_dev": true,
+  // Custom domains live here rather than only in the dashboard, so the set of
+  // hostnames this Worker answers on is reviewable and reproducible.
+  "routes": [
+    { "pattern": "joshdchang.com", "custom_domain": true },
+    { "pattern": "www.joshdchang.com", "custom_domain": true },
+    { "pattern": "joshchang.co", "custom_domain": true }
+    // www.joshchang.co is intentionally absent: the zone still has manually
+    // created, proxied A/AAAA records for `www` pointing at Cloudflare with no
+    // origin behind them, which is why it serves a 522. Wrangler refuses to
+    // attach a custom domain over externally managed records (API code 100117).
+    // Delete those two records in the joshchang.co zone, then add:
+    //   { "pattern": "www.joshchang.co", "custom_domain": true }
+  ]
 }
