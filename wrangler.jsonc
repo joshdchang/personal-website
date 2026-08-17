@@ -14,12 +14,12 @@
   "routes": [
     { "pattern": "joshdchang.com", "custom_domain": true },
     { "pattern": "www.joshdchang.com", "custom_domain": true },
-    { "pattern": "joshchang.co", "custom_domain": true }
-    // www.joshchang.co is intentionally absent: the zone still has manually
-    // created, proxied A/AAAA records for `www` pointing at Cloudflare with no
-    // origin behind them, which is why it serves a 522. Wrangler refuses to
-    // attach a custom domain over externally managed records (API code 100117).
-    // Delete those two records in the joshchang.co zone, then add:
-    //   { "pattern": "www.joshchang.co", "custom_domain": true }
+    { "pattern": "joshchang.co", "custom_domain": true },
+    // www.joshchang.co keeps its pre-existing hand-made A/AAAA records, which
+    // Cloudflare refuses to replace with a custom domain (API code 100117).
+    // Those records are proxied, so a plain route intercepts the request at the
+    // edge before the (nonexistent) origin is ever dialled, which is what was
+    // producing the 522.
+    { "pattern": "www.joshchang.co/*", "zone_name": "joshchang.co" }
   ]
 }
