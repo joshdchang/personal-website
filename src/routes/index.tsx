@@ -139,7 +139,7 @@ function Home() {
         <h1 className="pt-[1.5vw] text-center text-[15.3vw] leading-[0.95] font-black tracking-[-0.02em] uppercase whitespace-nowrap select-none">
           Josh Chang
         </h1>
-        <div className="mt-2 mb-6 grid grid-cols-2 gap-y-2 px-4 text-sm sm:grid-cols-4 sm:px-6">
+        <div className="mt-2 mb-6 grid grid-cols-2 gap-y-2 px-4 text-sm sm:flex sm:justify-between sm:px-6">
           <p>Developer</p>
           <p>Amateur geologist</p>
           <p>Tourist</p>
