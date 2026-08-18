@@ -140,7 +140,7 @@ function Home() {
           Josh Chang
         </h1>
         <div className="mt-2 mb-6 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 px-4 text-sm sm:px-6">
-          <p>Developer &amp; earth scientist</p>
+          <p>Developer &amp; amateur earth scientist</p>
           <a
             href="mailto:joshchang04@gmail.com"
             className="underline underline-offset-4 transition-colors hover:text-amber"
@@ -195,8 +195,9 @@ function Home() {
 
         <section className="mx-auto max-w-3xl px-4 py-28 text-center sm:px-6 sm:py-40">
           <p className="text-2xl leading-snug font-light text-balance sm:text-3xl">
-            I&rsquo;m a developer, earth scientist, and adventurer. I code, hike,
-            look at rocks, and predict the weather.
+            I&rsquo;m a developer, amateur earth scientist, and adventure
+            enjoyer. I code, hike, climb, look at rocks, and predict the
+            weather.
           </p>
         </section>
       </main>
