@@ -201,8 +201,8 @@ function Home() {
         </h1>
         <div className="mt-2 mb-6 grid grid-cols-2 gap-y-2 px-4 text-sm sm:flex sm:justify-between sm:px-6">
           <p>Developer</p>
-          <p>Amateur geologist</p>
           <p>Tourist</p>
+          <p>Amateur geologist</p>
           <button
             type="button"
             onClick={copy}
@@ -259,7 +259,7 @@ function Home() {
 
         <section className="mx-auto max-w-4xl px-4 py-28 text-center sm:px-6 sm:py-40">
           <p className="text-2xl leading-snug font-light text-balance sm:text-3xl">
-            I&rsquo;m a developer, amateur geologist, and tourist.
+            I&rsquo;m a developer, tourist, and amateur geologist.
             <br />I code, hike, climb, look at rocks, and predict the weather.
           </p>
         </section>

@@ -13,7 +13,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "I'm a developer, amateur geologist, and tourist. I code, hike, climb, look at rocks, and predict the weather.",
+          "I'm a developer, tourist, and amateur geologist. I code, hike, climb, look at rocks, and predict the weather.",
       },
     ],
     links: [
