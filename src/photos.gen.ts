@@ -121,7 +121,7 @@ export const photos: Photo[] = [
   { file: "DSCF9048", date: "2025-08-01", place: "Etosha, Namibia", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF9068", date: "2025-08-01", place: "Etosha, Namibia", w: 2000, h: 1454, widths: [1000, 2000] },
   { file: "DSCF9126", date: "2025-08-02", place: "Etosha, Namibia", w: 2000, h: 1329, widths: [1000, 2000] },
-  { file: "DSCF9242", date: "2025-08-03", place: "Etosha, Namibia", w: 2000, h: 1333, widths: [1000, 2000] },
+  { file: "DSCF9242", date: "2025-08-03", place: "Brandberg, Namibia", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF9323", date: "2025-08-04", place: "Skeleton Coast, Namibia", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "IDG_20250804_162339_771", date: "2025-08-04", place: "Skeleton Coast, Namibia", w: 2000, h: 1499, widths: [1000, 2000] },
   { file: "DSCF9370", date: "2025-08-05", place: "Skeleton Coast, Namibia", w: 2000, h: 1333, widths: [1000, 2000] },
