@@ -62,7 +62,7 @@ export const photos: Photo[] = [
   { file: "DSCF4114", date: "2024-05-21", place: "Běijīng", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF4159", date: "2024-05-22", place: "Xī'ān", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF4235", date: "2024-05-23", place: "Xī'ān", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
-  { file: "DSCF4479", date: "2024-05-30", place: "Lìjiāng, Yúnnán", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
+  { file: "DSCF4479", date: "2024-05-30", place: "Blue Moon Valley, Jade Dragon Snow Mountain", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF4512", date: "2024-05-31", place: "Tiger Leaping Gorge, Yúnnán", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF4642", date: "2024-05-31", place: "Tiger Leaping Gorge, Yúnnán", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF4650", date: "2024-05-31", place: "Tiger Leaping Gorge, Yúnnán", w: 2000, h: 1264, widths: [1000, 2000] },
@@ -147,5 +147,5 @@ export const photos: Photo[] = [
   { file: "DSCF1093", date: "2026-05-11", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1183", date: "2026-05-11", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1241", date: "2026-05-12", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
-  { file: "DSCF1371", date: "2026-05-13", place: "Utah", w: 2000, h: 1333, widths: [1000, 2000] },
+  { file: "DSCF1371", date: "2026-05-13", place: "Bonneville Salt Flats, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
 ];
