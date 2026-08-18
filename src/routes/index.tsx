@@ -16,6 +16,8 @@ import gorge from "~/assets/photos/gorge.jpg";
 import snowMountain from "~/assets/photos/snow-mountain.jpg";
 import karst from "~/assets/photos/karst.jpg";
 import osaka from "~/assets/photos/osaka.jpg";
+import nara from "~/assets/photos/nara.jpg";
+import adirondacks from "~/assets/photos/adirondacks.jpg";
 import kyoto from "~/assets/photos/kyoto.jpg";
 import aoraki from "~/assets/photos/aoraki.jpg";
 import tasman from "~/assets/photos/tasman.jpg";
@@ -40,7 +42,8 @@ export const Route = createFileRoute("/")({
 });
 
 /* ------------------------------------------------------------------ */
-/* Data — captions are my best guesses from the frames; edit freely.  */
+/* Data — places derived from EXIF timestamps matched against location   */
+/* history; titles are editable prose.                                   */
 /* ------------------------------------------------------------------ */
 
 type Frame = {
@@ -71,7 +74,7 @@ const rolls: Roll[] = [
         src: aboveClouds,
         alt: "Sunrise seen from above a sea of clouds",
         title: "Above the clouds",
-        place: "Hawaiʻi",
+        place: "Hawaiʻi Island",
         span: "sm:col-span-7",
         aspect: "aspect-[3/2]",
       },
@@ -79,7 +82,7 @@ const rolls: Roll[] = [
         src: naPali,
         alt: "Fluted green cliffs of the Nā Pali coast meeting the sea",
         title: "Nā Pali",
-        place: "Kauaʻi",
+        place: "Nā Pali Coast, Kauaʻi",
         span: "sm:col-span-5",
         aspect: "aspect-[4/5]",
         offset: "sm:mt-24",
@@ -88,8 +91,8 @@ const rolls: Roll[] = [
   },
   {
     n: "02",
-    region: "The West",
-    places: "California · Utah · Wyoming",
+    region: "North America",
+    places: "California · Utah · Wyoming · New York",
     frames: [
       {
         src: halfDome,
@@ -103,7 +106,7 @@ const rolls: Roll[] = [
         src: sequoia,
         alt: "Looking up the trunk of a giant sequoia into the sun",
         title: "Sequoia",
-        place: "Sierra Nevada, California",
+        place: "Sequoia National Park, California",
         span: "sm:col-span-4",
         aspect: "aspect-[3/4]",
       },
@@ -120,7 +123,7 @@ const rolls: Roll[] = [
         src: delicateArch,
         alt: "Delicate Arch standing over the slickrock bowl",
         title: "Delicate Arch",
-        place: "Moab, Utah",
+        place: "Arches National Park, Utah",
         span: "sm:col-span-6",
         aspect: "aspect-[4/3]",
       },
@@ -137,9 +140,18 @@ const rolls: Roll[] = [
         src: tetons,
         alt: "Indian paintbrush wildflowers below the Teton peaks",
         title: "Paintbrush",
-        place: "Teton Range, Wyoming",
-        span: "sm:col-span-8 sm:col-start-3",
+        place: "Grand Teton, Wyoming",
+        span: "sm:col-span-7",
         aspect: "aspect-[3/2]",
+      },
+      {
+        src: adirondacks,
+        alt: "A slow brown stream running through dense green forest",
+        title: "Cold water",
+        place: "Adirondacks, New York",
+        span: "sm:col-span-5",
+        aspect: "aspect-[4/5]",
+        offset: "sm:mt-20",
       },
     ],
   },
@@ -160,7 +172,7 @@ const rolls: Roll[] = [
         src: snowMountain,
         alt: "Sunlit peaks rising behind a temple roof ridge",
         title: "Snow mountain",
-        place: "Tiger Leaping Gorge, Yúnnán",
+        place: "Jade Dragon Snow Mountain, Yúnnán",
         span: "sm:col-span-5",
         aspect: "aspect-[4/5]",
         offset: "sm:mt-24",
@@ -169,7 +181,7 @@ const rolls: Roll[] = [
         src: karst,
         alt: "Karst towers receding into haze above a river town",
         title: "Karst country",
-        place: "Xīngpíng, Guǎngxī",
+        place: "Yangshuo, Guǎngxī",
         span: "sm:col-span-12",
         aspect: "aspect-[21/9]",
       },
@@ -179,16 +191,24 @@ const rolls: Roll[] = [
         title: "Neon river",
         place: "Dōtonbori, Ōsaka",
         span: "sm:col-span-6",
-        aspect: "aspect-[4/3]",
+        aspect: "aspect-[16/9]",
       },
       {
         src: kyoto,
-        alt: "A vermilion torii gate in the mossy forest of Fushimi Inari",
+        alt: "A vermilion torii gate on a mossy stone path at Fushimi Inari",
         title: "Ten thousand gates",
         place: "Fushimi Inari, Kyōto",
         span: "sm:col-span-6",
-        aspect: "aspect-[4/3]",
+        aspect: "aspect-[16/9]",
         offset: "sm:mt-20",
+      },
+      {
+        src: nara,
+        alt: "A sika deer standing on grass in front of a temple hall",
+        title: "The deer",
+        place: "Nara",
+        span: "sm:col-span-8 sm:col-start-3",
+        aspect: "aspect-[16/9]",
       },
     ],
   },
@@ -201,7 +221,7 @@ const rolls: Roll[] = [
         src: aoraki,
         alt: "Alpenglow on Aoraki / Mount Cook from an empty road at dawn",
         title: "Aoraki, first light",
-        place: "Mount Cook, Aotearoa",
+        place: "Aoraki / Mount Cook, Aotearoa",
         span: "sm:col-span-8",
         aspect: "aspect-[3/2]",
       },
@@ -209,7 +229,7 @@ const rolls: Roll[] = [
         src: tasman,
         alt: "The crumbling blue terminus of the Tasman Glacier in its lake",
         title: "Terminal ice",
-        place: "Tasman Glacier",
+        place: "Tasman Glacier, Aotearoa",
         span: "sm:col-span-4",
         aspect: "aspect-square",
         offset: "sm:mt-28",
@@ -218,7 +238,7 @@ const rolls: Roll[] = [
         src: dock,
         alt: "A figure sitting at the end of a dock under southern stars",
         title: "End of the dock",
-        place: "South Island",
+        place: "Lake Rotoiti, Nelson Lakes",
         span: "sm:col-span-6",
         aspect: "aspect-[4/3]",
       },
@@ -226,7 +246,7 @@ const rolls: Roll[] = [
         src: milford,
         alt: "Mitre Peak dissolving into rain and mist over Milford Sound",
         title: "Piopiotahi",
-        place: "Milford Sound",
+        place: "Milford Sound, Aotearoa",
         span: "sm:col-span-6",
         aspect: "aspect-[4/3]",
         offset: "sm:mt-16",
@@ -235,7 +255,7 @@ const rolls: Roll[] = [
         src: sydney,
         alt: "The Opera House and Sydney skyline glowing across the harbour",
         title: "Harbour lights",
-        place: "Sydney",
+        place: "Sydney, Australia",
         span: "sm:col-span-12",
         aspect: "aspect-[21/9]",
       },
@@ -244,7 +264,7 @@ const rolls: Roll[] = [
   {
     n: "05",
     region: "Africa & Arabia",
-    places: "Namibia · South Africa · Oman",
+    places: "Oman · Kenya · Namibia · South Africa",
     frames: [
       {
         src: deadvlei,
@@ -267,7 +287,7 @@ const rolls: Roll[] = [
         src: leopard,
         alt: "A leopard moving through tall green grass",
         title: "Spotted",
-        place: "Namibia",
+        place: "Kenya",
         span: "sm:col-span-6",
         aspect: "aspect-[4/3]",
       },
@@ -310,7 +330,7 @@ const rolls: Roll[] = [
   {
     n: "06",
     region: "Europe",
-    places: "France · Italy · Greece",
+    places: "Switzerland · France · Italy · Greece",
     frames: [
       {
         src: chamonix,
@@ -324,7 +344,7 @@ const rolls: Roll[] = [
         src: alps,
         alt: "Hikers descending a green alpine trail below snowy peaks",
         title: "The walk down",
-        place: "the Alps",
+        place: "Graubünden, Switzerland",
         span: "sm:col-span-7",
         aspect: "aspect-[3/2]",
         offset: "sm:mt-24",
@@ -333,7 +353,7 @@ const rolls: Roll[] = [
         src: calanque,
         alt: "White limestone cliffs around a turquoise calanque",
         title: "Calanque",
-        place: "Provence, France",
+        place: "Calanques, France",
         span: "sm:col-span-6",
         aspect: "aspect-[4/3]",
       },
@@ -350,7 +370,7 @@ const rolls: Roll[] = [
         src: crete,
         alt: "The old Venetian harbour of Chaniá in soft light",
         title: "Old harbour",
-        place: "Crete, Greece",
+        place: "Chania, Crete",
         span: "sm:col-span-8 sm:col-start-3",
         aspect: "aspect-[3/2]",
       },
@@ -361,27 +381,27 @@ const rolls: Roll[] = [
 const phenomena: Frame[] = [
   {
     src: eclipse,
-    alt: "Eclipse glasses held up against bare branches and sky",
-    title: "Eclipse day",
-    place: "path of totality",
+    alt: "A crescent sun seen through the dark lens of a pair of eclipse glasses",
+    title: "Through the glasses",
+    place: "Burlington, Vermont",
     span: "sm:col-span-4",
-    aspect: "aspect-[4/3]",
+    aspect: "aspect-[16/9]",
   },
   {
     src: jellyfish,
     alt: "Moon jellies drifting in deep blue water",
     title: "Moon jellies",
-    place: "behind glass",
+    place: "Monterey Bay, California",
     span: "sm:col-span-4",
-    aspect: "aspect-[4/3]",
+    aspect: "aspect-[16/9]",
   },
   {
     src: milkyWay,
     alt: "The Milky Way over a dark ridgeline",
     title: "The southern sky",
-    place: "far from streetlights",
+    place: "Mackenzie Basin, Aotearoa",
     span: "sm:col-span-4",
-    aspect: "aspect-[4/3]",
+    aspect: "aspect-[16/9]",
   },
 ];
 
@@ -462,14 +482,17 @@ function Home() {
             New Haven, CT
           </p>
           <p className="text-muted">
-            Six continents,
+            36 photographs
             <br />
-            one camera
+            2022&ndash;2026
           </p>
-          <p className="text-right text-muted sm:text-left">
-            Scroll for
-            <br />
-            the contact sheet ↓
+          <p className="text-right sm:text-left">
+            <a
+              href="mailto:joshchang04@gmail.com"
+              className="underline underline-offset-4 transition-colors hover:text-amber"
+            >
+              joshchang04@gmail.com
+            </a>
           </p>
         </div>
       </section>
@@ -490,7 +513,7 @@ function Home() {
             Kīlauea, erupting
           </span>
           <span className="font-normal normal-case tracking-normal italic">
-            Hawaiʻi Volcanoes National Park
+            Kīlauea, Hawaiʻi
           </span>
         </figcaption>
       </figure>
