@@ -195,9 +195,8 @@ function Home() {
 
         <section className="mx-auto max-w-3xl px-4 py-28 text-center sm:px-6 sm:py-40">
           <p className="text-2xl leading-snug font-light text-balance sm:text-3xl">
-            I&rsquo;m a developer, amateur geologist, and adventure
-            enjoyer. I code, hike, climb, look at rocks, and predict the
-            weather.
+            I&rsquo;m a developer, amateur geologist, and tourist. I code,
+            hike, climb, look at rocks, and predict the weather.
           </p>
         </section>
       </main>
