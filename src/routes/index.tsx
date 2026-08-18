@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { hero, photos, type Photo } from "~/photos.gen";
@@ -132,7 +133,66 @@ function Bleed({ p }: { p: Photo }) {
   );
 }
 
+const EMAIL = "joshchang04@gmail.com";
+
+/* Click to copy, anywhere the address appears. Falls back to a hidden
+   textarea on browsers without the async clipboard API. */
+function useCopyEmail() {
+  const [copied, setCopied] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
+
+  const copy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+    } catch {
+      const el = document.createElement("textarea");
+      el.value = EMAIL;
+      el.setAttribute("readonly", "");
+      el.style.cssText = "position:fixed;opacity:0";
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      el.remove();
+    }
+    setCopied(false);
+    requestAnimationFrame(() => setCopied(true));
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => setCopied(false), 2600);
+  }, []);
+
+  return { copied, copy };
+}
+
+function CopiedToast({ show }: { show: boolean }) {
+  return (
+    <div
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-4 pb-8"
+      aria-live="polite"
+    >
+      <div
+        className={`toast flex items-stretch bg-ink text-paper shadow-[0_8px_40px_rgba(23,20,16,0.28)] ${show ? "toast-in" : "toast-out"}`}
+      >
+        <span className="flex w-10 items-center justify-center bg-amber text-ink" aria-hidden>
+          <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4">
+            <path d="M3 8.5l3.2 3.2L13 5" strokeLinecap="square" />
+          </svg>
+        </span>
+        <span className="flex flex-col justify-center py-2.5 pr-5 pl-4">
+          <span className="text-[10px] font-semibold tracking-[0.2em] text-amber uppercase">
+            Copied
+          </span>
+          <span className="text-sm">{EMAIL}</span>
+        </span>
+        <span className="toast-bar absolute inset-x-0 bottom-0 h-[2px] origin-left bg-amber" aria-hidden />
+      </div>
+    </div>
+  );
+}
+
 function Home() {
+  const { copied, copy } = useCopyEmail();
   return (
     <div className="overflow-x-clip">
       <header>
@@ -143,12 +203,14 @@ function Home() {
           <p>Developer</p>
           <p>Amateur geologist</p>
           <p>Tourist</p>
-          <a
-            href="mailto:joshchang04@gmail.com"
-            className="justify-self-end underline underline-offset-4 transition-colors hover:text-amber sm:justify-self-end"
+          <button
+            type="button"
+            onClick={copy}
+            title="Copy email address"
+            className="cursor-pointer justify-self-end underline underline-offset-4 transition-colors hover:text-amber"
           >
-            joshchang04@gmail.com
-          </a>
+            {EMAIL}
+          </button>
         </div>
       </header>
 
@@ -204,12 +266,14 @@ function Home() {
       </main>
 
       <footer className="border-t-2 border-ink px-4 pt-10 pb-6 sm:px-6">
-        <a
-          href="mailto:joshchang04@gmail.com"
-          className="block text-[8.5vw] leading-none font-black tracking-tight uppercase whitespace-nowrap transition-colors duration-300 hover:text-amber"
+        <button
+          type="button"
+          onClick={copy}
+          title="Copy email address"
+          className="block w-full cursor-pointer text-left text-[8.5vw] leading-none font-black tracking-tight uppercase whitespace-nowrap transition-colors duration-300 hover:text-amber"
         >
           Get in touch
-        </a>
+        </button>
         <div className="mt-10 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 text-sm">
           <div className="flex gap-6">
             <a
@@ -232,6 +296,8 @@ function Home() {
           <p className="text-muted">© {new Date().getFullYear()} Josh Chang</p>
         </div>
       </footer>
+
+      <CopiedToast show={copied} />
     </div>
   );
 }
