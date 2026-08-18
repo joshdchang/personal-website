@@ -139,11 +139,13 @@ function Home() {
         <h1 className="pt-[1.5vw] text-center text-[15.3vw] leading-[0.95] font-black tracking-[-0.02em] uppercase whitespace-nowrap select-none">
           Josh Chang
         </h1>
-        <div className="mt-2 mb-6 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 px-4 text-sm sm:px-6">
-          <p>Developer &amp; amateur geologist</p>
+        <div className="mt-2 mb-6 grid grid-cols-2 gap-y-2 px-4 text-sm sm:grid-cols-4 sm:px-6">
+          <p>Developer</p>
+          <p>Amateur geologist</p>
+          <p>Tourist</p>
           <a
             href="mailto:joshchang04@gmail.com"
-            className="underline underline-offset-4 transition-colors hover:text-amber"
+            className="justify-self-end underline underline-offset-4 transition-colors hover:text-amber sm:justify-self-end"
           >
             joshchang04@gmail.com
           </a>
