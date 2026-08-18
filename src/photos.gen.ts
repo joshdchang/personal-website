@@ -141,7 +141,7 @@ export const photos: Photo[] = [
   { file: "DSCF0064", date: "2025-12-16", place: "Death Valley, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF9969", date: "2025-12-16", place: "Death Valley, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF0246", date: "2025-12-24", place: "Kīlauea, Hawaiʻi", w: 2000, h: 1333, widths: [1000, 2000] },
-  { file: "DSCF0294", date: "2025-12-25", place: "Hawaiʻi Island", w: 2000, h: 1333, widths: [1000, 2000] },
+  { file: "DSCF0294", date: "2025-12-25", place: "Mauna Kea, Hawaiʻi", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF0391", date: "2025-12-28", place: "Nā Pali Coast, Kauaʻi", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF0475", date: "2025-12-29", place: "Waimea Canyon, Kauaʻi", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1093", date: "2026-05-11", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
