@@ -8,7 +8,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#f4f1ea" },
       { title: "Josh Chang" },
+      {
+        name: "description",
+        content:
+          "Developer, earth scientist, adventurer. Photographs from six continents, one frame at a time.",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -16,6 +22,12 @@ export const Route = createRootRoute({
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
       { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap",
+      },
     ],
   }),
   shellComponent: RootDocument,
@@ -27,8 +39,9 @@ function RootDocument({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="bg-paper text-ink antialiased">
         {children}
+        <div className="grain" aria-hidden />
         <Scripts />
       </body>
     </html>
