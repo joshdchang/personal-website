@@ -6,13 +6,20 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const urls = import.meta.glob("../assets/photos/*.jpg", {
+const urls = import.meta.glob("../assets/photos/*.{jpg,avif}", {
   eager: true,
   query: "?url",
   import: "default",
 }) as Record<string, string>;
 
-const src = (file: string) => urls[`../assets/photos/${file}.jpg`];
+/* AVIF at a few widths for anything modern, with a small JPEG underneath so
+   the page still resolves without it. */
+const fallback = (file: string) => urls[`../assets/photos/${file}.jpg`];
+const avifSet = (p: Photo) =>
+  p.widths.map((w) => `${urls[`../assets/photos/${p.file}-${w}.avif`]} ${w}w`).join(", ");
+
+const COL = (span: number) =>
+  `(min-width: 1648px) ${Math.round((span / 12) * 1600)}px, (min-width: 640px) ${Math.round((span / 12) * 100)}vw, 100vw`;
 
 const fmt = (iso: string) => iso.replaceAll("-", ".");
 
@@ -73,16 +80,10 @@ const SPAN: Record<number, string> = {
   7: "sm:col-span-7",
   8: "sm:col-span-8",
 };
-const index = new Map(photos.map((p, i) => [p.file, i + 1]));
-const num = (p: Photo) => String(index.get(p.file) ?? 0).padStart(3, "0");
-
 function Caption({ p }: { p: Photo }) {
   return (
     <figcaption className="mt-2 flex items-baseline justify-between gap-4 text-[11px] tracking-[0.14em] tabular-nums text-muted">
-      <span>
-        <span className="text-amber">{num(p)}</span>
-        <span className="ml-3">{fmt(p.date)}</span>
-      </span>
+      <span className="text-amber">{fmt(p.date)}</span>
       <span className="text-right tracking-normal italic">{p.place}</span>
     </figcaption>
   );
@@ -92,15 +93,18 @@ function Frame({ cell }: { cell: Cell }) {
   const { p } = cell;
   return (
     <figure className={`reveal col-span-12 ${SPAN[cell.span]} ${cell.drift}`}>
-      <img
-        src={src(p.file)}
-        alt={p.place}
-        width={p.w}
-        height={p.h}
-        loading="lazy"
-        decoding="async"
-        className="w-full bg-ink/5"
-      />
+      <picture>
+        <source type="image/avif" srcSet={avifSet(p)} sizes={COL(cell.span)} />
+        <img
+          src={fallback(p.file)}
+          alt={p.place}
+          width={p.w}
+          height={p.h}
+          loading="lazy"
+          decoding="async"
+          className="w-full bg-ink/5"
+        />
+      </picture>
       <Caption p={p} />
     </figure>
   );
@@ -109,15 +113,18 @@ function Frame({ cell }: { cell: Cell }) {
 function Bleed({ p }: { p: Photo }) {
   return (
     <figure className="reveal my-12 sm:my-20">
-      <img
-        src={src(p.file)}
-        alt={p.place}
-        width={p.w}
-        height={p.h}
-        loading="lazy"
-        decoding="async"
-        className="max-h-[88svh] w-full bg-ink/5 object-cover"
-      />
+      <picture>
+        <source type="image/avif" srcSet={avifSet(p)} sizes="100vw" />
+        <img
+          src={fallback(p.file)}
+          alt={p.place}
+          width={p.w}
+          height={p.h}
+          loading="lazy"
+          decoding="async"
+          className="max-h-[88svh] w-full bg-ink/5 object-cover"
+        />
+      </picture>
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6">
         <Caption p={p} />
       </div>
@@ -144,21 +151,21 @@ function Home() {
       </header>
 
       <figure className="relative">
-        <img
-          src={src(hero.file)}
-          alt={hero.place}
-          width={hero.w}
-          height={hero.h}
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          className="h-[84svh] w-full object-cover"
-        />
+        <picture>
+          <source type="image/avif" srcSet={avifSet(hero)} sizes="100vw" />
+          <img
+            src={fallback(hero.file)}
+            alt={hero.place}
+            width={hero.w}
+            height={hero.h}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="h-[84svh] w-full object-cover"
+          />
+        </picture>
         <figcaption className="absolute inset-x-0 bottom-0 flex items-baseline justify-between gap-4 bg-gradient-to-t from-black/60 to-transparent px-4 pt-16 pb-4 text-[11px] tracking-[0.14em] tabular-nums text-white/85 sm:px-6">
-          <span>
-            <span className="text-amber">000</span>
-            <span className="ml-3">{fmt(hero.date)}</span>
-          </span>
+          <span className="text-amber">{fmt(hero.date)}</span>
           <span className="text-right tracking-normal italic">{hero.place}</span>
         </figcaption>
       </figure>

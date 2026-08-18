@@ -41,7 +41,6 @@ function RootDocument({ children }: { children: ReactNode }) {
       </head>
       <body className="bg-paper text-ink antialiased">
         {children}
-        <div className="grain" aria-hidden />
         <Scripts />
       </body>
     </html>

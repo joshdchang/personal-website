@@ -19,18 +19,6 @@ html {
   color: var(--color-ink);
 }
 
-/* Film grain — luminance noise over everything, very quiet */
-.grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 50;
-  opacity: 0.4;
-  mix-blend-mode: soft-light;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 160px 160px;
-}
-
 /* Frames drift up as they enter the viewport — scroll-driven, no JS */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
