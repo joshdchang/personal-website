@@ -174,8 +174,8 @@ function CopiedToast({ show }: { show: boolean }) {
       <div
         className={`toast flex items-stretch bg-ink text-paper shadow-[0_8px_40px_rgba(23,20,16,0.28)] ${show ? "toast-in" : "toast-out"}`}
       >
-        <span className="flex w-10 items-center justify-center bg-amber text-ink" aria-hidden>
-          <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4">
+        <span className="flex w-10 items-center justify-center bg-paper text-amber" aria-hidden>
+          <svg viewBox="0 0 16 16" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="3">
             <path d="M3 8.5l3.2 3.2L13 5" strokeLinecap="square" />
           </svg>
         </span>
