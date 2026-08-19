@@ -53,7 +53,7 @@ export const photos: Photo[] = [
   { file: "DSCF0974", date: "2023-06-02", place: "Graubünden, Switzerland", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1185", date: "2023-06-06", place: "Chamonix, France", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1243", date: "2023-06-08", place: "Cassis, Provence", w: 2000, h: 1333, widths: [1000, 2000] },
-  { file: "DSCF1274", date: "2023-06-08", place: "Calanques, France", w: 2000, h: 1333, widths: [1000, 2000] },
+  { file: "DSCF1274", date: "2023-06-08", place: "Calanques, Provence", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1356", date: "2023-06-12", place: "Lake Como, Italy", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1532", date: "2023-06-13", place: "Rome, Italy", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1681", date: "2023-06-15", place: "Athens, Greece", w: 2000, h: 1220, widths: [1000, 2000] },
