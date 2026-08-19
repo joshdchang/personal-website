@@ -75,7 +75,7 @@ export const photos: Photo[] = [
   { file: "DSCF1370", date: "2023-07-17", place: "Monterey Bay, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1404", date: "2023-07-17", place: "Point Lobos, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1946", date: "2023-11-21", place: "Monterey Bay, California", w: 2000, h: 1333, widths: [1000, 2000] },
-  { file: "DSCF1983", date: "2023-11-26", place: "New York", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
+  { file: "DSCF1983", date: "2023-11-26", place: "San Francisco, from the air", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF2044", date: "2023-11-26", place: "Utah, from the air", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF2081", date: "2023-12-17", place: "Puerto Rico", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
   { file: "DSCF2241", date: "2023-12-19", place: "U.S. Virgin Islands", w: 3000, h: 1688, widths: [1000, 2000, 3000] },
