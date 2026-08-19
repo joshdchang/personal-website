@@ -34,7 +34,7 @@ export const photos: Photo[] = [
   { file: "DSCF9969", date: "2025-12-16", place: "Death Valley, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF0064", date: "2025-12-16", place: "Death Valley, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF0026", date: "2025-12-16", place: "Death Valley, California", w: 2000, h: 1333, widths: [1000, 2000] },
-  { file: "DSCF9894", date: "2025-12-14", place: "New York City", w: 2000, h: 1333, widths: [1000, 2000] },
+  { file: "DSCF9894", date: "2025-12-14", place: "New York City, from the air", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "IMG_0090", date: "2025-08-20", place: "Yosemite, California", w: 2000, h: 1500, widths: [1000, 2000] },
   { file: "DSCF9883", date: "2025-08-18", place: "Yosemite, California", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF9824", date: "2025-08-12", place: "Cape Peninsula, South Africa", w: 2000, h: 1347, widths: [1000, 2000] },
