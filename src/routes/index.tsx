@@ -123,7 +123,7 @@ function Bleed({ p }: { p: Photo }) {
           height={p.h}
           loading="lazy"
           decoding="async"
-          className="max-h-[88svh] w-full bg-ink/5 object-cover"
+          className="w-full bg-ink/5 object-cover sm:max-h-[88svh]"
         />
       </picture>
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6">
@@ -225,7 +225,7 @@ function Home() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="h-[84svh] w-full object-cover"
+            className="aspect-[4/5] w-full object-cover sm:aspect-auto sm:h-[84svh]"
           />
         </picture>
         <figcaption className="absolute inset-x-0 bottom-0 flex items-baseline justify-between gap-4 bg-gradient-to-t from-black/60 to-transparent px-4 pt-16 pb-4 text-[11px] tracking-[0.14em] tabular-nums text-white/85 sm:px-6">
