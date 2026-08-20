@@ -15,7 +15,7 @@ export const hero: Photo =
 
 export const photos: Photo[] = [
   { file: "DSCF1371", date: "2026-05-13", place: "Bonneville Salt Flats, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
-  { file: "DSCF1310", date: "2026-05-12", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
+  { file: "DSCF1310", date: "2026-05-12", place: "Canyonlands National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1241", date: "2026-05-12", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1183", date: "2026-05-11", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
   { file: "DSCF1093", date: "2026-05-11", place: "Arches National Park, Utah", w: 2000, h: 1333, widths: [1000, 2000] },
